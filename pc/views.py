@@ -5,12 +5,12 @@ from rest_framework.decorators import api_view
 from rest_framework.parsers import JSONParser
 from django.http.response import JsonResponse
 from rest_framework import status
-from rest_framework.permissions import IsAuthenticated
-from rest_framework.decorators import permission_classes
+from rest_framework.decorators import authentication_classes
+from .authentication import APIKeyAuthentication
 
 
 @api_view(['GET','POST','PUT','DELETE'])
-@permission_classes([IsAuthenticated])
+@authentication_classes([APIKeyAuthentication])
 def main_view(request,id=0):
     if request.method=='GET':
         return get_view(request)
