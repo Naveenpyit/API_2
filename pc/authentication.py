@@ -5,7 +5,7 @@ API_KEY="sdkgfbkfckkngklkjkeyrterytcaxmslk"
 
 class APIKeyAuthentication (BaseAuthentication):
     def authenticate(self,request):
-        api_key=request.headers.get('X-API-KEY')
+        api_key=request.headers.get('api-key')
 
         print(f"Received API Key: {api_key}")
 
