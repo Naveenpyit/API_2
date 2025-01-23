@@ -1,7 +1,7 @@
 from rest_framework.authentication import BaseAuthentication
 from rest_framework.exceptions import AuthenticationFailed
-
-API_KEY="sdkgfbkfckkngklkjkeyrterytcaxmslk"
+import os
+API_KEY=os.getenv("API_KEY")
 
 class APIKeyAuthentication (BaseAuthentication):
     def authenticate(self,request):
