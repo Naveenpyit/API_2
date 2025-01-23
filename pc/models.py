@@ -8,3 +8,6 @@ class product(models.Model):
 
     class Meta:
         db_table='products'
+
+
+    

@@ -6,11 +6,11 @@ from rest_framework.parsers import JSONParser
 from django.http.response import JsonResponse
 from rest_framework import status
 from rest_framework.decorators import authentication_classes
-from .authentication import apikeycheck 
+from .authentication import APIKeyAuthentication
 
 
 @api_view(['GET','POST','PUT','DELETE'])
-@authentication_classes([apikeycheck ])
+@authentication_classes([APIKeyAuthentication])
 def main_view(request,id=0):
     print("API key passed Sucessfully")
     if request.method=='GET':

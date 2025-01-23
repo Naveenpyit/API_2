@@ -82,7 +82,7 @@ REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
 
         'rest_framework_simplejwt.authentication.JWTAuthentication',
-        'pc.authentication.apikeycheck', 
+        'pc.authentication.APIKeyAuthentication',
     ),
     'DEFAULT_PERMISSION_CLASSES': [],
 }

@@ -1,2 +1,4 @@
 .env
 authentication.py
+__pycache__
+
